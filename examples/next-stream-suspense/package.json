@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/node": "20.14.10",
-    "@types/react": "18.3.2",
+    "@types/react": "18.3.4",
     "@types/react-dom": "18.3.0",
     "daxus": "workspace:*",
     "daxus-next": "workspace:*",
