@@ -45,8 +45,8 @@ importers:
         specifier: ^24.1.1
         version: 24.1.1
       msw:
-        specifier: ^2.3.2
-        version: 2.3.2(typescript@5.4.5)
+        specifier: ^2.4.4
+        version: 2.4.4(typescript@5.4.5)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -124,8 +124,8 @@ importers:
         version: 5.4.5
     devDependencies:
       msw:
-        specifier: ^2.3.2
-        version: 2.3.2(typescript@5.4.5)
+        specifier: ^2.4.4
+        version: 2.4.4(typescript@5.4.5)
 
   packages/daxus:
     dependencies:
@@ -434,6 +434,13 @@ packages:
     resolution: {integrity: sha512-yn7BklA5acgcBr+7w064fGV+SGIFySjCKpqjcWgBAIfrAkY+4GQTJJHQMeT3V/sgz23VTEVV8TtOmkvJAhFVfg==}
     dependencies:
       statuses: 2.0.1
+    dev: true
+
+  /@bundled-es-modules/tough-cookie@0.1.6:
+    resolution: {integrity: sha512-dvMHbL464C0zI+Yqxbz6kZ5TOEp7GLW+pry/RWndAR8MJQAXZ2rPmIs8tziTZjeIyhSNZgZbCePtfSbdWqStJw==}
+    dependencies:
+      '@types/tough-cookie': 4.0.5
+      tough-cookie: 4.1.4
     dev: true
 
   /@esbuild/aix-ppc64@0.20.2:
@@ -787,20 +794,15 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@mswjs/cookies@1.1.0:
-    resolution: {integrity: sha512-0ZcCVQxifZmhwNBoQIrystCb+2sWBY2Zw8lpfJBPCHGCA/HWqehITeCRVIv4VMy8MPlaHo2w2pTHFV2pFfqKPw==}
-    engines: {node: '>=18'}
-    dev: true
-
-  /@mswjs/interceptors@0.29.1:
-    resolution: {integrity: sha512-3rDakgJZ77+RiQUuSK69t1F0m8BQKA8Vh5DCS5V0DWvNY67zob2JhhQrhCO0AKLGINTRSFd1tBaHcJTkhefoSw==}
+  /@mswjs/interceptors@0.35.0:
+    resolution: {integrity: sha512-f5cHyIvm4m4g1I5x9EH1etGx0puaU0OaX2szqGRVBVgUC6aMASlOI5hbpe7tJ9l4/VWjCUu5OMraCazLZGI24A==}
     engines: {node: '>=18'}
     dependencies:
       '@open-draft/deferred-promise': 2.2.0
       '@open-draft/logger': 0.3.0
       '@open-draft/until': 2.1.0
       is-node-process: 1.2.0
-      outvariant: 1.4.2
+      outvariant: 1.4.3
       strict-event-emitter: 0.5.1
     dev: true
 
@@ -908,7 +910,7 @@ packages:
     resolution: {integrity: sha512-X2g45fzhxH238HKO4xbSr7+wBS8Fvw6ixhTDuvLd5mqh6bJJCFAPwU9mPDxbcrRtfxv4u5IHCEH77BmxvXmmxQ==}
     dependencies:
       is-node-process: 1.2.0
-      outvariant: 1.4.2
+      outvariant: 1.4.3
     dev: true
 
   /@open-draft/until@2.1.0:
@@ -1180,6 +1182,10 @@ packages:
 
   /@types/statuses@2.0.4:
     resolution: {integrity: sha512-eqNDvZsCNY49OAXB0Firg/Sc2BgoWsntsLUdybGFOhAfCD6QJ2n9HXUIHGqt5qjrxmMv4wS8WLAw43ZkKcJ8Pw==}
+    dev: true
+
+  /@types/tough-cookie@4.0.5:
+    resolution: {integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==}
     dev: true
 
   /@types/wrap-ansi@3.0.0:
@@ -3105,22 +3111,22 @@ packages:
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
-  /msw@2.3.2(typescript@5.4.5):
-    resolution: {integrity: sha512-vDn6d6a50vxPE+HnaKQfpmZ4SVXlOjF97yD5FJcUT3v2/uZ65qvTYNL25yOmnrfCNWZ4wtAS7EbtXxygMug2Tw==}
+  /msw@2.4.4(typescript@5.4.5):
+    resolution: {integrity: sha512-iuM0qGs4YmgYCLH+xqb07w2e/e4fYmsx3+WHVlIOUA34TW1sw+wRpNmOlXnLDkw/T7233Jnm6t+aNf4v2E3e2Q==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
     peerDependencies:
-      typescript: '>= 4.7.x'
+      typescript: '>= 4.8.x'
     peerDependenciesMeta:
       typescript:
         optional: true
     dependencies:
       '@bundled-es-modules/cookie': 2.0.0
       '@bundled-es-modules/statuses': 1.0.1
+      '@bundled-es-modules/tough-cookie': 0.1.6
       '@inquirer/confirm': 3.0.0
-      '@mswjs/cookies': 1.1.0
-      '@mswjs/interceptors': 0.29.1
+      '@mswjs/interceptors': 0.35.0
       '@open-draft/until': 2.1.0
       '@types/cookie': 0.6.0
       '@types/statuses': 2.0.4
@@ -3128,7 +3134,7 @@ packages:
       graphql: 16.8.1
       headers-polyfill: 4.0.2
       is-node-process: 1.2.0
-      outvariant: 1.4.2
+      outvariant: 1.4.3
       path-to-regexp: 6.2.1
       strict-event-emitter: 0.5.1
       type-fest: 4.10.0
@@ -3300,8 +3306,8 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /outvariant@1.4.2:
-    resolution: {integrity: sha512-Ou3dJ6bA/UJ5GVHxah4LnqDwZRwAmWxrG3wtrHrbGnP4RnLCtA64A4F+ae7Y8ww660JaddSoArUR5HjipWSHAQ==}
+  /outvariant@1.4.3:
+    resolution: {integrity: sha512-+Sl2UErvtsoajRDKCE5/dBz4DIvHXQQnAxtQTF04OJxY0+DyZXSo5P5Bb7XYWOh81syohlYL24hbDwxedPUJCA==}
     dev: true
 
   /p-limit@3.1.0:
